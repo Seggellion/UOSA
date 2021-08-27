@@ -1,0 +1,53 @@
+@import 'mixins';
+.section{
+  margin: 14px 0px;
+  .content{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    .content-description{
+      width:80%;
+    }
+    .small-link{
+      width:100%;
+      display:block;
+    }
+    ul li{
+      line-height: 17px;
+    }
+  }
+  &:first-child{
+    margin-top:0px;
+  }
+  ul{
+    margin:0px;
+  }
+}
+
+.snippet_bar{
+  width:150px;
+  padding: 0px 10px;
+  border-left:1px solid $burgandy;
+  @media screen and (max-width: $small){
+    display:none;
+  }
+  .card{
+    padding:10px 0px;
+    &:first-child{
+      padding-top:0px;
+    }
+    .headline{
+      letter-spacing:0.9px;
+    }
+    .content-description{
+      text-align: center;
+      padding: 15px 0px;
+      font-size:0.62rem;
+      span{
+        text-align:left;
+        display:block;
+      }
+    }
+  }
+
+}

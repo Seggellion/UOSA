@@ -1,0 +1,175 @@
+@import 'mixins';
+
+@font-face {
+   font-family: 'CelticHand';
+   src: url('CelticHand.ttf');
+}
+
+body{
+  background-color:black;
+  font-family: verdana;
+  font-size: 0.8rem;
+  margin-right:20px;
+  p{
+    color:black;
+  }
+  a,p{
+    font-family: verdana;
+  }
+  a, a:visited, a:active{
+    color: $burgandy;
+    text-decoration:none;
+    &:hover{
+      text-decoration:underline;
+    }
+    &.small-link{
+      font-weight:bold;
+      font-style:italic;
+      font-size: 0.64rem;
+      font-family:verdana;
+    }
+  }
+  ul, li{
+    list-style: none;
+    padding:0px;
+  }
+  h1, .h1{
+    color: $burgandy;
+    font-family: "Montserrat Regular";
+    text-transform:uppercase;
+    font-size: 2rem;
+    &:first-letter{
+      font-size: 200%;
+    }
+  }
+  h3, .h3{
+    font-size: 1.15rem;
+    font-weight:100;
+    color: $burgandy;
+    font-family: MatrixBold;
+    margin:0px;
+  }
+  .small-header{
+    font-family: "CelticHand";
+    text-transform:uppercase;
+    color:black;
+    font-size: 0.96rem;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+  }
+  .very-small-header{
+    font-family: "CelticHand";
+    text-transform:uppercase;
+    color:black;
+    font-size: 0.66rem;
+    letter-spacing: 2px;
+  }
+  .red-header{
+    color: $burgandy;
+    letter-spacing: 0.5px;
+    font-size: 1.86rem;
+    line-height: 27px;
+    text-transform:capitalize;
+    font-family: "CelticHand";
+    text-shadow: 0.9px 0.8px 1.8px #6b6a6a;
+    &::after{
+      content: '';
+      display: block;
+      width: 93.8%;
+      margin: 0px auto;
+      border-top: 1.5px solid $burgandy;
+      transform: translateY(-1px);
+    }
+  }
+  .button, button{
+    &:before{
+      color:black;
+    }
+    font-family: "CelticHand";
+    text-transform:uppercase;
+    text-decoration:none;
+    color:$lightgrey;
+    font-size: 0.9rem;
+  }
+  h2, .h2{
+    color: $burgandy;
+    font-size: 1.5rem;
+    font-family: MatrixBold;
+    text-transform:uppercase;
+  }
+  main, .header-content{
+    background-image: image-url('paper.jpeg');
+  }
+  .home-container{
+    display:flex;
+    justify-content: flex-end;
+    position:relative;
+  }
+  main{
+    width:87%;
+    min-height:100vh;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    .feed{
+      display: flex;
+      flex-direction: column;
+    }
+    &:before{
+      content: '';
+          left: -112px;
+          transform: translateY(-20px);
+          display: block;
+          position: absolute;
+          width: 112px;
+          height: 100%;
+          background-repeat: repeat-y;
+          background-size: contain;
+          background-image: image-url('lefttile.jpeg');
+    }
+    &:after{
+      content: '';
+          right: -14px;
+          transform: translateY(-20px);
+          display: block;
+          position: absolute;
+          width: 14px;
+          height: 100%;
+          background-repeat: repeat-y;
+          background-size: contain;
+          background-image: image-url('righttile.jpeg');
+    }
+  }
+  #sidebar{
+    display:inline-block;
+  }
+}
+.headline-container{
+  display: flex;
+  align-items: center;
+}
+.headline{
+  width: 144px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "CelticHand";
+  text-transform: capitalize;
+  color: $lightgrey;
+  background-color: $burgandy;
+  font-size: 0.9rem;
+  padding: 0px;
+  margin: 0px;
+  padding-top: 2px;
+  letter-spacing: 1.7px;
+}
+small{
+  color: #999999;
+  font-style:italic;
+  font-size: 0.62rem;
+  font-family: verdana;
+  margin-left: 10px;
+}

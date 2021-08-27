@@ -1,0 +1,36 @@
+@import 'mixins';
+
+#sidebar{
+  width: 160px;
+  height: 400px;
+  background-image: image-url('banner_red.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top:20px;
+  padding-left:24px;
+  left:-10px;
+  position:absolute;
+  z-index:9000;
+  @media screen and (max-width: $small){
+    left:-130px;
+  }
+  ul,li{
+    list-style:none;
+    padding:0px;
+    a, a:visited{
+      color:#FFCC33;
+      font-weight:900;
+      text-transform:uppercase;
+      font-size:0.75rem;
+      text-decoration:none;
+      &:hover{
+        color:yellow;
+      }
+    }
+    .sub_menu a{
+      padding:0px;
+      font-size:0.65rem;
+      text-transform:none;
+    }
+  }
+}

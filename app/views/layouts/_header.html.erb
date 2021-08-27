@@ -1,0 +1,34 @@
+<header>
+  <%= link_to ' ', root_path, class: 'uo_logo' %>
+
+  <div class="header-content">
+    <div class="logo">
+      <h1>
+        <span class="small-header">Welcome to</span>
+        <span class="red-header">UltimaOnline</span>
+        <span class="very-small-header">The Second Age</span>
+      </h1>
+    </div>
+    <div class="header_bar">
+      <div class="page_name">
+        <%= controller.controller_name %>
+      </div>
+      <div class="date">
+        <%= Date.today.strftime("%-m/%e") %>/1998
+      </div>
+      <div class="search-container">
+        <span class="small-header">Search</span>
+        <input type="search" />
+      </div>
+      <div class="login-container">
+        <span class="small-header">Log in/Personalization</span>
+        <a href="#" class="pushable button">
+          <span class="front">
+            MYUO
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>
