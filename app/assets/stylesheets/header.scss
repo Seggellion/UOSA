@@ -24,7 +24,7 @@ header{
       background-size: cover;
       position: absolute;
       z-index:0;
-      background-image: image-url('topleft_c.jpeg');
+      background-image: image-url('topleft_c.jpg');
     }
     &:after{
       content: '';
@@ -36,7 +36,7 @@ header{
       background-size: cover;
       position: absolute;
       z-index: 0;
-      background-image: image-url('topright_c.jpeg');
+      background-image: image-url('topright_c.jpg');
     }
   }
   .date{

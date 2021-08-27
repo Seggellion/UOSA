@@ -98,7 +98,7 @@ body{
     text-transform:uppercase;
   }
   main, .header-content{
-    background-image: image-url('paper.jpeg');
+    background-image: image-url('paper.jpg');
   }
   .home-container{
     display:flex;
@@ -126,7 +126,7 @@ body{
           height: 100%;
           background-repeat: repeat-y;
           background-size: contain;
-          background-image: image-url('lefttile.jpeg');
+          background-image: image-url('lefttile.jpg');
     }
     &:after{
       content: '';
@@ -138,7 +138,7 @@ body{
           height: 100%;
           background-repeat: repeat-y;
           background-size: contain;
-          background-image: image-url('righttile.jpeg');
+          background-image: image-url('righttile.jpg');
     }
   }
   #sidebar{
