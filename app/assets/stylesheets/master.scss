@@ -1,14 +1,23 @@
 @import 'mixins';
 
 @font-face {
-   font-family: 'CelticHand';
-   src: font-url('CelticHand.ttf');
+  font-family: 'CelticHand';
+  src: font-url('CelticHand.ttf');
+}
+
+@font-face {
+  font-family: 'MatrixBold';
+  src: font-url('MatrixBold.ttf');
+}
+@font-face {
+  font-family: 'MatrixRegular';
+  src: font-url('MatrixRegular.ttf');
 }
 
 body{
   background-color:black;
   font-family: verdana;
-  font-size: 0.8rem;
+  font-size: 0.81rem;
   margin-right:20px;
   p{
     color:black;
@@ -33,21 +42,87 @@ body{
     list-style: none;
     padding:0px;
   }
+  strong.small{
+    font-size: 0.63rem;
+  }
+  small{
+    color: #999999;
+    font-style:italic;
+    font-size: 0.62rem;
+    font-family: verdana;
+    margin-left: 10px;
+    &.not-italic{
+      font-style:normal;
+      color:#000;
+    }
+  }
+  a.small{
+    font-style:italic;
+    font-size: 0.62rem;
+    font-family: verdana;
+    margin-left: 10px;
+    font-weight:900;
+  }
+  article{
+    min-width: 590px;
+    .h1{
+      font-weight: 100;
+      margin:0px;
+      margin-bottom:10px;
+      &:first-letter{
+        font-size: 160%;
+      }
+    }
+    .subtext{
+      margin-top:-10px;
+      margin-bottom:20px;
+    }
+  }
+
   h1, .h1{
     color: $burgandy;
     font-family: "Montserrat Regular";
     text-transform:uppercase;
     font-size: 2rem;
-    &:first-letter{
-      font-size: 200%;
-    }
+  }
+  h2, .h2{
+    color: $burgandy;
+    font-size: 1.5rem;
+    transform: scale(1, 0.9);
+    font-family: 'MatrixRegular';
+    text-transform:uppercase;
   }
   h3, .h3{
     font-size: 1.15rem;
     font-weight:100;
     color: $burgandy;
-    font-family: MatrixBold;
+    transform: scale(1, 0.9);
+    font-family: 'MatrixRegular';
     margin:0px;
+  }
+  h4, .h4{
+    font-size: 1.35rem;
+    font-weight:900;
+    color: $burgandy;
+    font-family: 'MatrixRegular';
+    margin:0px;
+    text-transform:none;
+    transform: scale(1, 0.9);
+  }
+  h5, .h5{
+    color: $burgandy;
+    text-transform:uppercase;
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight:900;
+  }
+  .field{
+    margin-bottom:16px;
+  }
+
+  label{
+    font-weight:800;
+    display:block;
   }
   .small-header{
     font-family: "CelticHand";
@@ -91,54 +166,60 @@ body{
     color:$lightgrey;
     font-size: 0.9rem;
   }
-  h2, .h2{
-    color: $burgandy;
-    font-size: 1.5rem;
-    font-family: MatrixBold;
-    text-transform:uppercase;
-  }
   main, .header-content{
     background-image: image-url('paper.jpg');
   }
-  .home-container{
+  .social_link{
+    width: 50px;
+    &:hover{
+      fill: $burgandy;
+    }
+  }
+  .page-container{
+    padding-left: 100px;
+    @media screen and (max-width: $small){
+      padding-left:15px;
+    }
     display:flex;
-    justify-content: flex-end;
+    align-items: flex-end;
     position:relative;
+    flex-direction: column;
   }
   main{
-    width:87%;
+    width:100%;
     min-height:100vh;
     padding: 20px 0px;
     display: flex;
     flex-direction: row;
     position:relative;
-    .feed{
+    .feed, article{
+      padding-left: 50px;
       display: flex;
       flex-direction: column;
     }
     &:before{
       content: '';
-          left: -112px;
-          transform: translateY(-20px);
-          display: block;
-          position: absolute;
-          width: 112px;
-          height: 100%;
-          background-repeat: repeat-y;
-          background-size: contain;
-          background-image: image-url('lefttile.jpg');
+      left: -97px;
+      transform: translateY(-20px);
+      display: block;
+      position: absolute;
+      width: 112px;
+      height: 100%;
+      background-repeat: repeat-y;
+      background-size: contain;
+      background-image: image-url('lefttile.jpg');
     }
     &:after{
       content: '';
-          right: -14px;
-          transform: translateY(-20px);
-          display: block;
-          position: absolute;
-          width: 14px;
-          height: 100%;
-          background-repeat: repeat-y;
-          background-size: contain;
-          background-image: image-url('righttile.jpg');
+      right: -14px;
+      transform: translateY(-20px);
+      display: block;
+      position: absolute;
+      width: 14px;
+      height: 100%;
+      background-repeat: repeat-y;
+      background-size: contain;
+      background-image: image-url('righttile.jpg');
     }
   }
   #sidebar{
@@ -148,6 +229,13 @@ body{
 .headline-container{
   display: flex;
   align-items: center;
+  &.large{
+    .headline{
+      width:243px;
+      height:25px;
+      font-size:1.4rem;
+    }
+  }
 }
 .headline{
   width: 144px;
@@ -166,10 +254,53 @@ body{
   padding-top: 2px;
   letter-spacing: 1.7px;
 }
-small{
-  color: #999999;
-  font-style:italic;
-  font-size: 0.62rem;
-  font-family: verdana;
-  margin-left: 10px;
+
+.pushable {
+  background-color: #3e1207;
+  border-radius: 3px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin-top:4px;
+  &.green{
+    margin-left:5px;
+  }
+  &:hover{
+    text-decoration:none;
+  }
+  &:active .front{
+    transform: translateY(-2px);
+  }
+  .front {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 17px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    background-color: $burgandy;
+    color: $lightgrey;
+    transform: translateY(-3px) translateX(-3.3px);
+    border-top: 3px solid #c68877;
+    border-left: 2px solid #b25c45;
+    text-shadow: -1px -1px black;
+    text-decoration:none;
+    &::before{
+      content:'';
+      margin-top:5px;
+      display:block;
+    }
+    &:hover{
+      color:white;
+      text-decoration:none;
+    }
+  }
+  &.green .front{
+    background-color:green;
+    font-size: 0.75rem;
+    border-top: 3px solid #5aa05a;
+    text-decoration:none;
+  }
 }

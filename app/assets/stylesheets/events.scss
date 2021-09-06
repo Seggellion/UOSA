@@ -1,0 +1,53 @@
+@import 'mixins';
+
+.event-card, .event-page{
+  margin-bottom:30px;
+  .h4{
+    margin-bottom: 2px;
+  }
+  table{
+    width:100%;
+    th{
+      background-color: $teal;
+      text-transform:uppercase;
+      text-align:center;
+      color:white;
+      font-weight:900;
+      font-size:0.63rem;
+      width:69px;
+    }
+    td{
+      background-color: $gold;
+      text-align:center;
+      font-size:0.63rem;
+    }
+  }
+  .event-info{
+    display:flex;justify-content: space-between;
+  }
+  .event-image{
+    width: 125px;
+    margin-bottom: -75px;
+  }
+  &.event-page .event-image{
+    margin-bottom:0px;
+  }
+  .event-details{
+    display:flex;
+    .headers{
+      width:200px;
+      display:flex;
+      flex-direction:column;
+      width:85px;
+      line-height: 1rem;
+    }
+    .event-detail-details{
+      display: flex;
+      flex-direction: column;
+      line-height: 1rem;
+    }
+  }
+  .event-card-footer{
+    display:block;
+  }
+}

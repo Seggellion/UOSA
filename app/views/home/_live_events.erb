@@ -1,20 +1,19 @@
 <div class="section live_events">
-  <div class="headline-container">
+  <div class="headline-container large">
     <h2 class="headline">Live Events</h2>
-    <small>(4 of many player run events this month)</small>
+    <%= link_to new_event_path, class: "pushable button green" do %>
+    <span class="front">
+      Create
+    </span>
+    <% end %>
+    <small>(<%= @total_events %> of many player run events this {{time period}})</small>
   </div>
   <ul>
+    <% @events.each do |event| %>
     <li>
-      <strong>In-Game: </strong><a href="">4th Minoc Horserace (Europa-Aug 16)</a>
+<strong>In-Game: </strong>
+<a href="<%= event %>"><%= event.title %> (<%= event.shard %>-<%= event.start_time.strftime("%b %d") %>)</a>
     </li>
-    <li>
-      <strong>In-Game: </strong><a href="">Battle Chess Match--Guild vs. Guild (Chesapeake-Aug 19)</a>
-    </li>
-    <li>
-      <strong>In-Game: </strong><a href="">Summer Festival (Drachenfels-Aug 20)</a>
-    </li>
-    <li>
-      <strong>In-Game: </strong><a href="">(Re-)Opening of the Inn of the Last Home! (Europa-Aug 20)</a>
-    </li>
+    <% end %>
   </ul>
 </div>

@@ -1,13 +1,17 @@
 @import 'mixins';
-
+.home #sidebar{
+    background-image: image-url('banner_red.png');
+}
 #sidebar{
   width: 160px;
   height: 400px;
-  background-image: image-url('banner_red.png');
+
+  background-image: image-url('banner_blue.png');
   background-size: contain;
   background-repeat: no-repeat;
   padding-top:20px;
   padding-left:24px;
+  top:140px;
   left:-10px;
   position:absolute;
   z-index:9000;
