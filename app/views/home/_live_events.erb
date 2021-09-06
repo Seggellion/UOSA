@@ -12,7 +12,7 @@
     <% @events.each do |event| %>
     <li>
 <strong>In-Game: </strong>
-<a href="<%= event %>"><%= event.title %> (<%= event.shard %>-<%= event.start_time.strftime("%b %d") %>)</a>
+<a href="<%= event_path(event) %>"><%= event.title %> (<%= event.shard %>-<%= event.start_time.strftime("%b %d") %>)</a>
     </li>
     <% end %>
   </ul>
