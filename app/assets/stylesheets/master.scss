@@ -304,3 +304,22 @@ body{
     text-decoration:none;
   }
 }
+.mobile_button{
+  display: block;
+  position: absolute;
+  right: 0px;
+  height: 30px;
+  width: 50px;
+  top: 2px;
+  background: transparent;
+  border: none;
+}
+@media screen and (min-width: $small){
+  .mobile_button{
+    display:none;
+  }
+}
+#sidebar.mobileMenu{
+  left:0px;
+  transition: all 0.5s;
+}

@@ -1,4 +1,5 @@
 <section id="sidebar">
+  <button class="mobile_button" onclick="mobileMenu();"></button>
   <ul>
     <li>
       <%= link_to 'Community', community_path %>
@@ -40,3 +41,9 @@
     </li>
   </ul>
 </section>
+<script>
+  function mobileMenu(){
+    var element = document.getElementById("sidebar");
+    element.classList.toggle("mobileMenu");
+  };
+</script>

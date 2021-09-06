@@ -5,7 +5,7 @@
 #sidebar{
   width: 160px;
   height: 400px;
-
+  transition: all 0.5s;
   background-image: image-url('banner_blue.png');
   background-size: contain;
   background-repeat: no-repeat;

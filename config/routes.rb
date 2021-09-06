@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'community', to: "community#index"
   get 'bnn', to: "community#bnn"
   get 'legend', to: "community#legend"
+  get 'guidelines', to: "community#guidelines"
   get 'contact', to: "content#contact"
 end

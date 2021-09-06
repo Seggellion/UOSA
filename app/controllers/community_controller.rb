@@ -6,4 +6,7 @@ end
 def bnn
 end
 
+def guidelines
+end
+
 end
