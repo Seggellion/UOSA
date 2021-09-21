@@ -1,0 +1,58 @@
+<article>
+  <h2 class="h1">Screen shots</h2>
+  <br><br>
+
+  <div class="screenshot-manager">
+    <div class="main-image">
+      <small>To submit your own screenshots for display here: Click Here</small>
+      <img style="width:400px; height: 300px;" />
+      <small>* Click on either image for a 640 x 480 version.</small>
+    </div>
+    <div class="image-details">
+      <div class="image-details-segment">
+        <h4>OFFICIAL SCREEN SHOTS</h4>
+        Select Screen Shot
+      </div>
+
+      <div class="image-details-segment">
+        <h4>USER SCREEN SHOTS</h4>
+        Select Screen Shot
+        <img style="width: 125px; height:80px;" />
+        Click for a 640x480 version.
+
+        <%= form_with model: @screenshot do |form| %>
+        <%= form.hidden_field :url, class: "simple-file-upload" %>
+        <%= form.hidden_field :user_id, value: 1 %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="screenshot-submission">
+    <h4>SUBMIT YOUR OWN SCREEN SHOTS</h4>
+    <p>
+      SUBMIT your own screenshots to us. In order to celebrate your activities in Ultima Online, we will be displaying a new player generated screenshot each week on the front page of the OWO site. In order to make this process as painless as possible, we have just a few guidelines for you to follow when creating screenshots: (please understand that we cannot accept images that do not conform to this criteria)
+    </p>
+
+    <strong>Screen Shot Parameters:</strong>
+    <ol type="1">
+      <li>640 x 480</li>
+      <li>24 bit color (no 256 color)</li>
+      <li>Bitmap (*.bmp) format</li>
+    </ol>
+    <strong>Aesthetics:</strong>
+    <ol type="1">
+      <li>No cursor in shot</li>
+      <li>No UO or windows interface in shot (gameplay area only)</li>
+      <li>No partial gumps (if you want your paperdoll in the shot, it must be the whole paperdoll)</li>
+      <li>Must be game engine generated (no fakes or other manipulation)</li>
+    </ol>
+
+    <strong>Please also provide in the Email with the shot:</strong>
+    <ol type="1">
+      <li>Your name (either in-game character name)</li>
+      <li>Your location (the city and state or corresponding locale of your country that you physically live in, not the game city or shard)</li>
+      <li>A 1 sentence caption for the shot</li>
+    </ol>
+  </div>
+
+</article>

@@ -1,0 +1,29 @@
+.main-image{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:20px;
+}
+
+.screenshot-manager{
+  display: flex;
+}
+
+.image-details{
+  padding:0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.screenshot-submission{
+  ol{
+    padding-inline-start: 20px;
+  }
+  li{
+    list-style: inherit;
+  }
+}
+
+.image-details-segment{
+  margin-bottom:20px;
+  display: flex;
+  flex-direction: column;
+}

@@ -9,4 +9,7 @@ end
 def guidelines
 end
 
+def pic_of_the_week
+end
+
 end

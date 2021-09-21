@@ -8,4 +8,8 @@ end
 def requirements
 end
 
+def screenshots
+  @screenshot = Screenshot.new
+end
+
 end
