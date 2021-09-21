@@ -1,0 +1,15 @@
+current directory: /Users/dustinhill/Desktop/desktop-cloud/projects/uosa/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.7/ext/bootsnap
+/Users/dustinhill/.rbenv/versions/3.0.0/bin/ruby -I /Users/dustinhill/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210921-4287-ce0a3s.rb extconf.rb
+creating Makefile
+
+current directory: /Users/dustinhill/Desktop/desktop-cloud/projects/uosa/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/dustinhill/Desktop/desktop-cloud/projects/uosa/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/dustinhill/Desktop/desktop-cloud/projects/uosa/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20210921-4287-kzx9ua/bootsnap
