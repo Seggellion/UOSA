@@ -1,11 +1,18 @@
+@import 'mixins';
+
 .main-image{
   display: flex;
   flex-direction: column;
   margin-bottom:20px;
 }
 
+
 .screenshot-manager{
   display: flex;
+  flex-direction:column;
+  @media screen and (min-width: $small){
+    flex-direction:row;
+  }
 }
 
 .image-details{
@@ -26,4 +33,30 @@
   margin-bottom:20px;
   display: flex;
   flex-direction: column;
+  .widgetFrame{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  form{
+    display:flex;
+    flex-direction:row;
+    .information-fields{
+      display:flex;
+      flex-direction:column;
+    }
+  }
+}
+
+.admin-screenshot-card{
+  display:flex;
+  width:110px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  &.approved{
+    background-color:$green;
+  }
 }

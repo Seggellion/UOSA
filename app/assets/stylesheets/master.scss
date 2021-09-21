@@ -64,7 +64,9 @@ body{
     font-weight:900;
   }
   article{
-    min-width: 590px;
+    @media screen and (min-width: $small){
+      min-width: 590px;
+    }
     .h1{
       font-weight: 100;
       margin:0px;
@@ -185,6 +187,21 @@ body{
     position:relative;
     flex-direction: column;
   }
+header{
+  &:before{
+    content: '';
+    left: 0px;
+    top:-10px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 117px;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: image-url('toptile.jpg');
+  }
+}
+
   main{
     width:100%;
     min-height:100vh;
@@ -193,9 +210,14 @@ body{
     flex-direction: row;
     position:relative;
     .feed, article{
-      padding-left: 50px;
       display: flex;
       flex-direction: column;
+      padding-left: 15px;
+      padding-right:15px;
+      min-width: inherit;
+      @media screen and (min-width: $small){
+        padding-left: 50px;
+      }
     }
     &:before{
       content: '';
@@ -323,4 +345,38 @@ body{
 #sidebar.mobileMenu{
   left:0px;
   transition: all 0.5s;
+}
+
+.admin{
+  padding:10px;
+  border:2px solid red;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  h2{
+    width:100%;
+  }
+}
+
+.lg-on {
+  .button:before, button:before{
+    color:white;
+  }
+  .lg-backdrop{
+    z-index:9001;
+  }
+  .lg-outer{
+    z-index:9002;
+  }
+}
+
+.lightbox img{
+  cursor: pointer;
+  display:none;
+  &:first-child{
+    display:block;
+  }
+}
+.snippet_bar .lightbox img{
+  margin:0px auto;
 }

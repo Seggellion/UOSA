@@ -18,7 +18,16 @@
     </div>
     <div class="content">
       <div class="content-description">
+        <% unless @approved_images.blank? %>
+        <div data-controller="lightbox" class="images lightbox" data-lightbox-options-value='{"loop":true}'>
+          <% @approved_images.each do |screenshot| %>
+          <%= image_tag screenshot.url, size:"125x80",  data: { src: screenshot.url,
+            sub_html: screenshot.title} %>
+            <% end %>
+          </div>
+          <% else %>
         <img src="<%= asset_path('pic-of-week.jpg')%>">
+        <% end %>
       </div>
     </div>
   </div>

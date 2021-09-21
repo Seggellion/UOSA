@@ -15,3 +15,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # custom fonts
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+# lightbox
+Rails.application.config.assets.precompile += %w( lightbox/* )
