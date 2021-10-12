@@ -10,7 +10,7 @@
     </div>
     <div class="header_bar">
       <div class="page_name">
-        <%= controller.controller_name %>
+        <%= controller.controller_name.humanize %>
       </div>
       <div class="date">
         <%= Date.today.strftime("%-m/%e") %>/1998

@@ -1,0 +1,29 @@
+article.beginning {
+  .table-contents{
+    ul{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 70%;
+      li{
+        width:50%;
+        a{
+          font-weight:900;
+        }
+      }
+    }
+  }
+  strong{
+    margin-bottom:-10px;
+    margin-top:10px;
+    display:block;
+  }
+  img{
+    display:block;
+    margin-bottom:15px;
+  }
+}
+
+.rules{
+  margin-bottom:20px;
+}

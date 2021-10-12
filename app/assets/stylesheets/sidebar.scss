@@ -1,6 +1,12 @@
 @import 'mixins';
-.home #sidebar{
+.home #sidebar, .new_player_center #sidebar{
     background-image: image-url('banner_red.png');
+}
+.sub_menu {
+  display:none;
+  &.open{
+    display:block;
+  }
 }
 #sidebar{
   width: 160px;

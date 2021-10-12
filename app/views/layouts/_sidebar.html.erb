@@ -3,6 +3,23 @@
   <ul>
     <li>
       <%= link_to 'Community', community_path %>
+      <ul class="sub_menu <% if controller.controller_name.include? 'community' or controller.controller_name.include? 'events'  %> open <%end%>">
+        <li>
+          <%= link_to 'Newspaper', bnn_path %>
+        </li>
+        <li>
+          <%= link_to 'Calendar', events_path %>
+        </li>
+        <li>
+          <a href="#">Guilds</a>
+        </li>
+        <li>
+          <a href="#">Newsletter</a>
+        </li>
+        <li>
+          <a href="#">Links</a>
+        </li>
+        </ul>
     </li>
     <li>
       <a href="#">Playguide</a>
@@ -17,8 +34,31 @@
       <a href="#">ACCT MGMT</a>
     </li>
     <li>
+      <%= link_to 'New Player', new_player_center_path %>
+      <ul class="sub_menu <% if controller.controller_name.include? 'new' %> open <%end%>">
+        <li>
+          <%= link_to 'Connecting', connecting_path %>
+        </li>
+        <li>
+          <%= link_to 'Beginning', beginning_path %>
+        </li>
+        <li>
+          <a href="#">Professions</a>
+        </li>
+        <li>
+          <%= link_to 'Etiquette', rules_path %>
+        </li>
+        <li>
+          <a href="#">The Community</a>
+        </li>
+        <li>
+          <a href="#">The Staff</a>
+        </li>
+      </ul>
+    </li>
+    <li>
       <%= link_to 'Home', root_path %>
-      <ul class="sub_menu">
+      <ul class="sub_menu <% if controller.controller_name.include? 'home' %> open <%end%>">
         <li>
           <a href="#">What's New</a>
         </li>
@@ -32,12 +72,12 @@
           <%= link_to 'Requirements', requirements_path %>
         </li>
         <li>
-          <a href="#">Downloads</a>
+          <%= link_to 'Downloads', downloads_path %>
         </li>
         <li>
           <a href="#">Awards</a>
         </li>
-        </ul>
+      </ul>
     </li>
     <li>
       <%= link_to 'Contact Us', contact_path %>
