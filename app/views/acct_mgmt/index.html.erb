@@ -1,0 +1,89 @@
+<article>
+  <div class="community-cards">
+    <div class="headline-container">
+      <%= link_to new_acct_path do %>
+      <h2 class="headline" style="font-size:90%">Create New Acct</h2>
+      <% end %>
+    </div>
+    Accounts are created automatically through the game client. Your e-mail address will be verified following login through the in-game chat terminal.
+    
+  </div>
+
+  <div class="community-cards">
+    <div class="headline-container">
+      <%= link_to modify_acct_path do %>
+      <h2 class="headline" style="font-size:85%">Modify Existing Acct</h2>
+      <% end %>
+    </div>
+    If you have already created an Ultima Online account and would like to change your Billing Information, Password, enter a Game Time code, or cancel your account, click here.
+    
+  </div>
+
+
+
+  <h5>*Support Second Age by making a Donation or Subscribing*</h5>
+<p>Thanks for your interest in contributing to Second Age.</p>
+
+<p>No one is obligated or will receive any type of reward in-game for donating to the shard, and all revenue goes to cover hosting costs, publicity, and other various expenses.</p>
+<br/>
+<strong>Make a one time donation:</strong>
+<%= link_to 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=derrick%40uosecondage%2ecom&item_name=Uo%20Second%20Age%20Shard%20Donation&item_number=00002&page_style=Primary&no_shipping=1&return=http%3a%2f%2fuosecondage%2ecom%2fDonationComplete%2easpx&cancel_return=http%3a%2f%2fuosecondage%2ecom%2fDonationCanceled%2easpx&cn=Optional%20Information&tax=0&currency_code=USD&lc=US&bn=PP%2dDonationsBF&charset=UTF%2d8' do %>
+<%= image_tag("btn_donate.jpg", class: 'donate') %>
+<% end %>
+<p>There's no minimum donation, anything helps a lot. We very much appreciate your donation; this helps keep us going!</p>
+
+<p>If you have an account on our forums please include your forum account nickname in the payment note, especially if it's associated with a different email address.</p>
+
+
+<p>You may also choose to make a recurring donation via PayPal or credit card here:</p>
+
+<h4>Subscribe to Second Age:Set up a recurring donation</h4>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="KFKQJ92FPNGHQ">
+        <div class="editor-label">
+            <input type="hidden" name="on0" value="Subscription Amount">Subscription Level:
+        </div>
+        <div class="editor-field">
+            <select name="os0">
+	            <option value="Townie">Townie : $5.00 USD - monthly</option>
+	            <option value="Adventurer" selected="selected">Adventurer : $10.00 USD - monthly</option>
+	            <option value="Baron">Baron : $20.00 USD - monthly</option>
+            </select>
+        </div>
+        <div class="editor-label">
+            <input type="hidden" name="on1" value="Forum name (if you have one)">Forum name (optional):
+        </div>
+        <div class="editor-field">
+            <input type="text" name="os1" maxlength="200">
+        </div>
+        <div class="editor-label">
+        </div>
+        <div class="editor-field">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </div>
+        </form>
+<p>
+If you choose the recurring donation option, you can cancel at any time by clicking here: 
+<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=NZQ3AH3269G9U">Unsubscribe</a>
+</p>
+
+
+<h4>We now also accept Bitcoin donations.</h4>
+<p>
+Send your donation to this wallet address (our wallet's public key): 1GaF1RkpeuwkcKmXXWGoAHDtKkqBxnH82E
+</p>
+<%= image_tag("UOSADonateBtc.png", class: 'donateBitcoin') %>
+
+<p>
+If you send Bitcoin, please also send us a message to let us know who you are!
+</p>
+
+<h4>Thanks!</h4>
+<p>
+Second Age is supported by Player Donations, advertising revenue, and the Owner. Donations made will first be used to pay monthly shard expenses, as well as to support needed hardware upgrades as our player population grows. We also will occasionally run targeted ad campaigns to help bring new players to the shard. Thanks again for your interest in donating, and thanks for enjoying the shard!
+</p>
+
+  </article>

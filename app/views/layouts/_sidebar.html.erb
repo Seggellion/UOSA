@@ -31,7 +31,7 @@
       <a href="#">Update CTR</a>
     </li>
     <li>
-      <a href="#">ACCT MGMT</a>
+    <%= link_to 'ACCT MGMT', acct_mgmt_path %>
     </li>
     <li>
       <%= link_to 'New Player', new_player_center_path %>
@@ -57,8 +57,8 @@
       </ul>
     </li>
     <li>
-      <%= link_to 'Home', root_path %>
-      <ul class="sub_menu <% if controller.controller_name.include? 'home' %> open <%end%>">
+      <%= link_to 'Home', root_path %><script>console.log('<%= controller.controller_name  %>');</script>
+      <ul class="sub_menu <% if controller.controller_name.include? 'home' or  controller.controller_name.include? 'acct_mgmt' or  controller.controller_name.include? 'content' %> open <%end%>">
         <li>
           <a href="#">What's New</a>
         </li>

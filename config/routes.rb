@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get 'guidelines', to: "community#guidelines"
   get 'screenshots', to: "home#screenshots"
   get 'contact', to: "content#contact"
+  get 'acct_mgmt', to: 'acct_mgmt#index'
+  get 'new_acct', to: 'acct_mgmt#new_acct'
+  get 'modify_acct', to: 'acct_mgmt#modify_acct'
 end
